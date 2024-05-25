@@ -10,6 +10,8 @@ X, y = iris.data, iris.target
 clf = DecisionTreeClassifier() 
 clf.fit(X, y) 
 
+
 # Save the model to a file 
 with open('model.pkl', 'wb') as f: 
     pickle.dump(clf, f) 
+
