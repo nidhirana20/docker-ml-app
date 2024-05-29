@@ -26,24 +26,24 @@
 
 # Use an official Python runtime as a parent image 
     FROM python:3.9-slim 
-    ## Set the working directory 
+    # Set the working directory 
     WORKDIR /usr/src/app 
-    ## Copy the current directory contents into the container at /usr/src/app 
+    # Copy the current directory contents into the container at /usr/src/app 
     FROM python:3.9-slim 
 
-    ## Set the working directory 
+    # Set the working directory 
     WORKDIR /usr/src/app 
 
-    ## Copy the current directory contents into the container at /usr/src/app 
+    # Copy the current directory contents into the container at /usr/src/app 
     COPY . /usr/src/app
 
-    ## Install any needed packages specified in requirements.txt 
+    # Install any needed packages specified in requirements.txt 
     RUN pip install --no-cache-dir -r requirements.txt 
 
-    ## Make port 80 available to the world outside this container 
+    # Make port 80 available to the world outside this container 
     EXPOSE 80 
 
-    ## Run app.py when the container launches 
+    # Run app.py when the container launches 
     CMD ["python", "app.py"]
 
 ### Create another file, name it 'requirementts.text'
@@ -54,25 +54,25 @@ Pandas
 scikit-learn
 
 ### Create a simple ML Application
-## Create a script train_model.py to train a simple machine learning model and save it. Here, we've used the Iris dataset and a decision tree classifier using the following code.
-from sklearn.datasets import load_iris
-from sklearn.tree import DecisionTreeClassifier
-import pickle 
+## Create a script train_model.py to train a simple machine learning model and save it. Here, we've used the Iris dataset and a decision tree classifier using the following code:
+    from sklearn.datasets import load_iris
+    from sklearn.tree import DecisionTreeClassifier
+    import pickle 
 
-# Load the Iris dataset
-iris = load_iris()
-X, y = iris.data, iris.target
+    # Load the Iris dataset
+    iris = load_iris()
+    X, y = iris.data, iris.target
 
-# Train a decision tree classifier
-clf = DecisionTreeClassifier() 
-clf.fit(X, y) 
+    # Train a decision tree classifier
+    clf = DecisionTreeClassifier() 
+    clf.fit(X, y) 
 
 
-# Save the model to a file 
-with open('model.pkl', 'wb') as f: 
+    # Save the model to a file 
+    with open('model.pkl', 'wb') as f: 
     pickle.dump(clf, f) 
 
-###Run the train_model.py script to generate model.pkl:
+## Run the train_model.py script to generate model.pkl:
 python train_model.py 
 
 ## Create a new file 'app.py' 
