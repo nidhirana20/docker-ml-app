@@ -109,7 +109,7 @@ app = Flask(__name__)
 - this command maps port 4000 on host to port 80 in the container, to allow the access of 'http://localhost:4000'
 - open browser, navigate to 'http://localhost:4000'
 ## Test the ML Endpoint 
-## Here, we've used Thunder Client to test the model. Thunder Cient is a popular lightweight API testing tool.
+### Here, we've used Thunder Client to test the model. Thunder Cient is a popular lightweight API testing tool.
 - sending a POST request with JSON data
  POST http://localhost:4000/predict 
  '{"input": [5.1, 3.5, 1.4, 0.2]}'
