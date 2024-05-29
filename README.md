@@ -48,10 +48,10 @@
 
 ## Create another file, name it 'requirementts.text'
 - Add the following dependencies
-Flask
-Numpy
-Pandas
-scikit-learn
+### Flask
+### Numpy
+### Pandas
+### scikit-learn
 
 ## Create a simple ML Application
 ## Create a script train_model.py to train a simple machine learning model and save it. Here, we've used the Iris dataset and a decision tree classifier using the following code:
