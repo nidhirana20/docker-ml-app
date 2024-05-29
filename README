@@ -1,0 +1,15 @@
+# Machine Learning Application with Docker 
+
+## Overview
+-This project icludes building a machine learning application, later using Docker to containerize it. The application makes use of a decision tree classifier trained on the Iris dataset and provides predictions vis a Flask API.
+
+## Prequisities 
+- Basic understanding of Python programming
+- Basic understanding of machine learning alogrithms
+- Familiarity with Git and GitHub
+- Basic knowledge of Docker
+
+## Project Setup
+
+### Step 1: Install Docker Engine
+-Install Docker using 
