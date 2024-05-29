@@ -16,36 +16,35 @@
 
 ### Create Project Directory 
 -Open a terminal or command prompt.
-=Create a directory for the project and navigate into it
-
-mkdir ml-app 
-cd ml-app
+-Create a directory for the project and navigate into it
+    mkdir ml-app 
+    cd ml-app
 
 ### Create a Docker file 
 - Step 1 In VS Code. open the project directory ('ml-app')
--Step 2 Create a new file named 'Dockerfile' using the below content
+- Step 2 Create a new file named 'Dockerfile' using the below content
 
 # Use an official Python runtime as a parent image 
-FROM python:3.9-slim 
-# Set the working directory 
-WORKDIR /usr/src/app 
-# Copy the current directory contents into the container at /usr/src/app 
-FROM python:3.9-slim 
+    FROM python:3.9-slim 
+    ## Set the working directory 
+    WORKDIR /usr/src/app 
+    ## Copy the current directory contents into the container at /usr/src/app 
+    FROM python:3.9-slim 
 
-# Set the working directory 
-WORKDIR /usr/src/app 
+    ## Set the working directory 
+    WORKDIR /usr/src/app 
 
-# Copy the current directory contents into the container at /usr/src/app 
-COPY . /usr/src/app
+    ## Copy the current directory contents into the container at /usr/src/app 
+    COPY . /usr/src/app
 
-# Install any needed packages specified in requirements.txt 
-RUN pip install --no-cache-dir -r requirements.txt 
+    ## Install any needed packages specified in requirements.txt 
+    RUN pip install --no-cache-dir -r requirements.txt 
 
-# Make port 80 available to the world outside this container 
-EXPOSE 80 
+    ## Make port 80 available to the world outside this container 
+    EXPOSE 80 
 
-# Run app.py when the container launches 
-CMD ["python", "app.py"]
+    ## Run app.py when the container launches 
+    CMD ["python", "app.py"]
 
 ### Create another file, name it 'requirementts.text'
 - Add the following dependencies
